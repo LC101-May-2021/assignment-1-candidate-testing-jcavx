@@ -3,8 +3,7 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
-candidateName = 'Candidate Name: ';
+let candidateName = '';
 //console.log(candidateName);
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
@@ -18,8 +17,8 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  let askForName = input.question(candidateName);
-console.log(askForName);
+  candidateName = input.question('Candidate Name: ');
+console.log('Welcome ' + candidateName + '!');
 }
 
 function askQuestion() {
@@ -42,7 +41,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  
+  //console.log('Welcome' + askForName());
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
