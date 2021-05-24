@@ -4,8 +4,8 @@ const input = require('readline-sync');
 
 // TODO 1.1a: Define candidateName // 
 let candidateName;
-candidateName = 'Candidate Name:';
-console.log(candidateName);
+candidateName = 'Candidate Name: ';
+//console.log(candidateName);
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question;
@@ -18,7 +18,8 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-//console.log(askForName);
+  let askForName = input.question(candidateName);
+console.log(askForName);
 }
 
 function askQuestion() {
